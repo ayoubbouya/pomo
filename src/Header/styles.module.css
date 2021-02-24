@@ -1,0 +1,21 @@
+.header {
+  width: 620px;
+  padding: 1rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.list {
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-left: 10px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  background-color: #f2f2f227;
+}
