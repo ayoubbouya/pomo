@@ -1,10 +1,10 @@
 import "./App.css";
-import Header from "./Header/Header";
+import Bg from "./Backgrounds/Bg";
 
 function App() {
   return (
-    <div className="background">
-      <Header />
+    <div>
+      <Bg />
     </div>
   );
 }

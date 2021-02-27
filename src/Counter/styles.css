@@ -1,0 +1,25 @@
+.counterSection {
+  width: 620px;
+  height: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+.breakList {
+  display: inline-flex;
+}
+.list {
+  cursor: pointer;
+  margin: 0 10px;
+}
+.bg1 {
+  background-color: red;
+  color: aliceblue;
+}
+.bg2 {
+  background-color: rebeccapurple;
+  color: aliceblue;
+}
+.bg3 {
+  background-color: rosybrown;
+  color: aliceblue;
+}
