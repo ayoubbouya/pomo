@@ -29,9 +29,12 @@
   font-weight: 600;
   border-radius: 3px;
 }
+
 .titleMin {
   font-size: 110px;
 }
+/*  button start and pause  */
+
 .btnStart,
 .btnPause {
   margin-top: 1rem;
@@ -53,12 +56,7 @@
   box-shadow: rgb(235 235 235) 0px 0px 0px;
   margin-top: 5px;
 }
-
-.bg1,
-.bg2,
-.bg3 {
-  color: white;
-}
+/* color button start and pause  */
 .bg1 {
   background-color: #db524d;
 }
@@ -67,4 +65,21 @@
 }
 .bg3 {
   background-color: #437ea9;
+}
+
+/* background color pages  */
+
+.btnColor1 {
+  color: #db524d;
+}
+.btnColor2 {
+  color: #468e91;
+}
+.btnColor3 {
+  color: #437ea9;
+}
+.bg1,
+.bg2,
+.bg3 {
+  color: white;
 }
