@@ -4,22 +4,22 @@ import Header from "../Header/Header";
 
 // import styles from "./styles.module.css";
 function Bg() {
-  const [selectedTab, setSelectedTab] = React.useState(0);
+  const [bgColor, setBgColor] = React.useState(1);
   return (
     <div>
       <section
         className={
-          selectedTab === 1
+          bgColor === 1
             ? "bg1"
-            : selectedTab === 2
+            : bgColor === 2
             ? "bg2"
-            : selectedTab === 3
+            : bgColor === 3
             ? "bg3"
             : ""
         }
       >
         <Header />
-        <Counter selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+        <Counter bgColor={bgColor} setBgColor={setBgColor} />
       </section>
     </div>
   );
