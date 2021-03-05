@@ -1,5 +1,5 @@
 .header {
-  width: 620px;
+  width: 650px;
   padding: 1rem;
   margin: auto;
   display: flex;
@@ -18,4 +18,9 @@
   text-transform: capitalize;
   border-radius: 5px;
   background-color: #f2f2f227;
+}
+@media (max-width: 650px) {
+  .header {
+    width: 100%;
+  }
 }

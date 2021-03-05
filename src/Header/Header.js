@@ -19,8 +19,7 @@ function Header() {
           </li>
           <li className={styles.list}>
             {" "}
-            <FiSettings />
-            settings
+            <FiSettings /> settings
           </li>
           <li className={styles.list}>
             <FaUserAlt /> login

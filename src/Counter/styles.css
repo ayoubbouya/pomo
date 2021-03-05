@@ -83,3 +83,12 @@
 .bg3 {
   color: white;
 }
+@media (max-width: 650px) {
+  .headCounter,
+  .counterSection {
+    width: 85%;
+  }
+  .list {
+    font-size: 14px;
+  }
+}

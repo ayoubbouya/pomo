@@ -70,7 +70,6 @@ const Counter = (props) => {
   const changed3 = () => {
     setBgColor(3);
     handlePause();
-
     setStart(true); // display button start
     setMin(
       <Countdown
@@ -137,9 +136,6 @@ const Counter = (props) => {
             <h2 className="titleMin">{min}</h2>
 
             <Modal show={show} onHide={handleClose} animation={false}>
-              <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
-              </Modal.Header>
               <Modal.Body>
                 The timer is still running, are you sure you want to switch?
               </Modal.Body>
