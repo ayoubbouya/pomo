@@ -1,0 +1,21 @@
+.sectionTime {
+  text-align: center;
+  padding: 20rem 0;
+}
+.tasks {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 480px;
+  margin: auto;
+  font-weight: 800;
+
+  border-bottom: 1px solid white;
+}
+.dots {
+  padding: 2px 5px;
+  font-size: 20px;
+  background-color: #f2f2f22f;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}

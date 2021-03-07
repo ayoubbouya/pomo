@@ -1,6 +1,7 @@
 import React from "react";
 import Counter from "../Counter/Counter";
 import Header from "../Header/Header";
+import Todolist from "../todolist/Todolist";
 
 // import styles from "./styles.module.css";
 function Bg() {
@@ -20,6 +21,7 @@ function Bg() {
       >
         <Header />
         <Counter bgColor={bgColor} setBgColor={setBgColor} />
+        <Todolist />
       </section>
     </div>
   );

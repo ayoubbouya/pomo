@@ -1,11 +1,11 @@
 .counterSection {
   width: 620px;
-  height: 700px;
+  height: 50px;
   margin: 2rem auto;
   text-align: center;
 }
 .headCounter {
-  background-color: #f2f2f221;
+  background-color: #f2f2f21c;
   width: 480px;
   height: 370px;
   margin: auto;

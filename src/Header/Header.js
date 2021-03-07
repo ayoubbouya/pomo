@@ -8,23 +8,19 @@ function Header() {
   return (
     <div>
       <header className={styles.header}>
-        <h2>
-          {" "}
-          <FaCheckCircle /> Pomo{" "}
-        </h2>
+        <h5 className={styles.logo}>
+          <FaCheckCircle /> Pomofocus
+        </h5>
         <ul className={styles.nav}>
           <li className={styles.list}>
-            {" "}
             <HiOutlineDocumentReport /> reports
           </li>
           <li className={styles.list}>
-            {" "}
             <FiSettings /> settings
           </li>
           <li className={styles.list}>
             <FaUserAlt /> login
           </li>
-          <h3> </h3>
         </ul>
       </header>
     </div>

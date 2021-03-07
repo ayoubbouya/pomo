@@ -1,6 +1,5 @@
 .header {
-  width: 650px;
-  padding: 1rem;
+  width: 630px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -9,12 +8,18 @@
 }
 .nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+.logo {
+  font-weight: 800;
+  margin-top: 8px;
 }
 .list {
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 5px 10px;
   margin-left: 10px;
+  font-size: 14px;
   text-transform: capitalize;
   border-radius: 5px;
   background-color: #f2f2f227;
