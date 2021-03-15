@@ -1,0 +1,31 @@
+.btn{
+    width: 480px;
+    margin: auto;
+    color: white;
+    text-transform: capitalize;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.8;
+    margin-top: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+}
+.iconPlus{
+    font-size: 20px;
+    margin-right: 5px;
+}
+ .sectionTodoList{
+     background-color: aliceblue;
+     color: black;
+     width: 480px;
+     margin: 10px auto;
+     padding: 2rem;
+     border-radius: 5px;
+ }
+ .hideSectionTodoList{
+     visibility: hidden;
+ }
