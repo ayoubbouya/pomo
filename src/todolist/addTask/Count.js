@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { BsPlusCircleFill } from "react-icons/bs";
 import { RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri";
+import TodoList from "./TodoList";
 
 function Count() {
   const [selectedAddTask, setSelectedAddTask] = useState(false);
@@ -11,16 +12,17 @@ function Count() {
   /* *********************************************************************************** */
   /************* TODOLIST state and useState *************/
 
-  const [value, setValue] = useState("");
+  const [inputList, setInputList] = useState("");
   const [Items, setItems] = useState([]);
 
   const itemEvent = (event) => {
-    setValue(event.target.value);
+    setInputList(event.target.value);
   };
   const listOfTodo = () => {
     setItems((oldItems) => {
-      return [...oldItems, value];
+      return [...oldItems, inputList];
     });
+    setInputList("");
   };
   /* ************************************************************************************ */
   /************* count useState increment and decrement from buttons *************/
@@ -37,14 +39,14 @@ function Count() {
 
   return (
     <div>
-      <button onClick={handelOnClick} className={styles.btn}>
-        <BsPlusCircleFill className={styles.iconPlus} />
-        add task
-      </button>
       {/* Output for Todolist */}
-      <ul className={styles.output}>
-        {Items.map((item) => {
-          return <li> {item} </li>;
+      <ul>
+        {Items.map((item, index) => {
+          return (
+            <div className={styles.output}>
+              <TodoList key={index} text={item} />
+            </div>
+          );
         })}
       </ul>
       {selectedAddTask ? (
@@ -52,35 +54,53 @@ function Count() {
           <section>
             {/* Input for Todolist */}
             <input
-              onChange={itemEvent}
               type="text"
-              placeholder="what are you working on ?"
+              placeholder="What are you working on ?"
+              className={styles.inputTodo}
+              value={inputList}
+              onChange={itemEvent}
             />
           </section>
-          <h6>Est Pomodoros</h6>
-          {/* input for numbers */}
-          <input
-            type="number"
-            name="clicks"
-            value={count}
-            min="0"
-            onChange={(e) => {
-              setCount(e.target.value);
-            }}
-          />
-          {/*  increment and decrement from buttons */}
-          <button onClick={increment}>
-            <RiArrowUpSFill />
-          </button>
-          <button onClick={decrement}>
-            <RiArrowDownSFill />
-          </button>
-          {/*********** buttons for Todolist ************/}
-          <button>cancel</button>
-          <button onClick={listOfTodo}>save</button> 
+          <h6 className={styles.h6}>Est Pomodoros</h6>
+          <section>
+            {/* input for numbers */}
+            <input
+              type="number"
+              name="clicks"
+              value={count}
+              min="0"
+              onChange={(e) => {
+                setCount(e.target.valueInput);
+              }}
+              className={styles.inputNum}
+            />
+            {/*  increment and decrement from buttons */}
+            <button className={styles.btnIncrement} onClick={increment}>
+              <RiArrowUpSFill />
+            </button>
+            <button className={styles.btnDecrement} onClick={decrement}>
+              <RiArrowDownSFill />
+            </button>
+            <br />
+            {/*********** buttons for Todolist ************/}
+            <div className={styles.btnsCancelSave}>
+              <button className={styles.btnCancel} onClick={handelOnClick}>
+                Cancel
+              </button>
+              <button className={styles.btnSave} onClick={listOfTodo}>
+                Save
+              </button>
+               
+            </div>
+          </section>
         </section>
       ) : (
-        <div></div>
+        <div>
+          <button onClick={handelOnClick} className={styles.btn}>
+            <BsPlusCircleFill className={styles.iconPlus} />
+            add task
+          </button>
+        </div>
       )}
     </div>
   );

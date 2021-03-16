@@ -19,13 +19,90 @@
     margin-right: 5px;
 }
  .sectionTodoList{
-     background-color: aliceblue;
-     color: black;
-     width: 480px;
-     margin: 10px auto;
-     padding: 2rem;
-     border-radius: 5px;
- }
- .hideSectionTodoList{
-     visibility: hidden;
- }
+    background-color: white;
+    width: 480px;
+    margin: 10px auto;
+    border-radius: 8px;
+    font-size: 22px;
+    padding: 1.5rem 0;
+    padding-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-weight: bold;  
+    text-align: left;
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 20px, rgb(0 0 0 / 10%) 0px 3px 6px;
+}
+.inputTodo{
+    outline: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: 15px 20px;
+    color: #555555 ;
+    font-weight: bold;
+    font-size: 22px; 
+}
+.inputTodo::placeholder {
+    color: #BBBBBB;
+}
+.output{
+    background-color: white;
+    border-left: 6px solid black;
+    color: black;
+    width: 480px;
+    margin: 7px auto;
+    padding: 1rem 0;
+    font-size: 18px;
+}
+.h6{
+    color: black;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 0px 20px;
+    font-weight: 800;
+    padding-top: 10px;
+}
+.inputNum{
+    width: 80px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-color: #EFEFEF;
+    margin: 0 18px;
+    padding: 2px 8px;
+}
+.btnIncrement,.btnDecrement {
+    margin: 0 2px;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 2px;
+    width: 40px;
+}
+.btnsCancelSave{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #EFEFEF;
+    margin: 2rem 0;
+    border-radius:  0 0 8px 8px;
+    text-align: right;
+}
+.btnSave{
+    background-color: #B2B2B2;
+    color: white;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px ;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 2px;
+}
+.btnCancel{
+    background-color: transparent;
+    color: #939393;
+    border: none;
+    font-size: 16px;
+    font-weight: 900;
+    margin: 0 20px ;
+}
