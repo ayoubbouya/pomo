@@ -51,18 +51,26 @@
     color: black;
     width: 480px;
     margin: 7px auto;
-    padding: 1rem 0;
+    padding: 1rem;
     font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .h6{
-    color: black;
-    display: block;
-    text-align: left;
+    color: black;     
     width: 100%;
-    padding: 0px 20px;
     font-weight: 800;
-    padding-top: 10px;
+    padding-left: 20px;
 }
+.dots {
+    padding: 3px 0px;
+    width: 28px;
+    font-size: 30px;
+    color: #999999;   
+    border-radius: 4px;
+    border: 1px solid #999999;
+  }
 .inputNum{
     width: 80px;
     outline: none;

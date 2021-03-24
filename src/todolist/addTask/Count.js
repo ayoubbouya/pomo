@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { BsPlusCircleFill } from "react-icons/bs";
 import { RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri";
-import TodoList from "./TodoList";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 function Count() {
+  /************* hide att task button *************/
   const [selectedAddTask, setSelectedAddTask] = useState(false);
   const handelOnClick = () => {
     setSelectedAddTask(!selectedAddTask);
@@ -20,6 +21,7 @@ function Count() {
   };
   const listOfTodo = () => {
     setItems((oldItems) => {
+      console.log(oldItems);
       return [...oldItems, inputList];
     });
     setInputList("");
@@ -36,6 +38,7 @@ function Count() {
     /*only positive numbers*/
     if (count > 0) setCount(parseInt(count) - 1);
   };
+  /************************************************************************************* */
 
   return (
     <div>
@@ -43,12 +46,20 @@ function Count() {
       <ul>
         {Items.map((item, index) => {
           return (
-            <div className={styles.output}>
-              <TodoList key={index} text={item} />
-            </div>
+            <li className={styles.output} key={index}>
+              {item}
+              <BsThreeDotsVertical
+                onClick={() => {
+                  handelOnClick();
+                  setInputList(item);
+                }}
+                className={styles.dots}
+              />{" "}
+            </li>
           );
         })}
       </ul>
+
       {selectedAddTask ? (
         <section className={styles.sectionTodoList}>
           <section>
@@ -90,7 +101,6 @@ function Count() {
               <button className={styles.btnSave} onClick={listOfTodo}>
                 Save
               </button>
-               
             </div>
           </section>
         </section>
