@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { BsPlusCircleFill } from "react-icons/bs";
 import { RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import TodoList from "../GTodo/TodoList";
 
 function Count() {
   /************* hide att task button *************/
@@ -10,23 +10,6 @@ function Count() {
   const handelOnClick = () => {
     setSelectedAddTask(!selectedAddTask);
   };
-  /* *********************************************************************************** */
-  /************* TODOLIST state and useState *************/
-
-  const [inputList, setInputList] = useState("");
-  const [Items, setItems] = useState([]);
-
-  const itemEvent = (event) => {
-    setInputList(event.target.value);
-  };
-  const listOfTodo = () => {
-    setItems((oldItems) => {
-      console.log(oldItems);
-      return [...oldItems, inputList];
-    });
-    setInputList("");
-  };
-  /* ************************************************************************************ */
   /************* count useState increment and decrement from buttons *************/
   const [count, setCount] = useState(1);
 
@@ -43,66 +26,31 @@ function Count() {
   return (
     <div>
       {/* Output for Todolist */}
-      <ul>
-        {Items.map((item, index) => {
-          return (
-            <li className={styles.output} key={index}>
-              {item}
-              <BsThreeDotsVertical
-                onClick={() => {
-                  handelOnClick();
-                  setInputList(item);
-                }}
-                className={styles.dots}
-              />{" "}
-            </li>
-          );
-        })}
-      </ul>
-
       {selectedAddTask ? (
         <section className={styles.sectionTodoList}>
-          <section>
-            {/* Input for Todolist */}
-            <input
-              type="text"
-              placeholder="What are you working on ?"
-              className={styles.inputTodo}
-              value={inputList}
-              onChange={itemEvent}
-            />
-          </section>
-          <h6 className={styles.h6}>Est Pomodoros</h6>
-          <section>
-            {/* input for numbers */}
-            <input
-              type="number"
-              name="clicks"
-              value={count}
-              min="0"
-              onChange={(e) => {
-                setCount(e.target.valueInput);
-              }}
-              className={styles.inputNum}
-            />
-            {/*  increment and decrement from buttons */}
-            <button className={styles.btnIncrement} onClick={increment}>
-              <RiArrowUpSFill />
-            </button>
-            <button className={styles.btnDecrement} onClick={decrement}>
-              <RiArrowDownSFill />
-            </button>
-            <br />
-            {/*********** buttons for Todolist ************/}
-            <div className={styles.btnsCancelSave}>
-              <button className={styles.btnCancel} onClick={handelOnClick}>
-                Cancel
-              </button>
-              <button className={styles.btnSave} onClick={listOfTodo}>
-                Save
-              </button>
-            </div>
-          </section>
+          {/* input for numbers */}
+          <input
+            type="number"
+            name="clicks"
+            value={count}
+            min="0"
+            onChange={(e) => {
+              setCount(e.target.valueInput);
+            }}
+            className={styles.inputNum}
+          />
+          {/*  increment and decrement from buttons */}
+          <button className={styles.btnIncrement} onClick={increment}>
+            <RiArrowUpSFill />
+          </button>
+          <button className={styles.btnDecrement} onClick={decrement}>
+            <RiArrowDownSFill />
+          </button>
+          <br />
+          <TodoList />
+          <button className={styles.btnCancel} onClick={handelOnClick}>
+            Cancel
+          </button>
         </section>
       ) : (
         <div>

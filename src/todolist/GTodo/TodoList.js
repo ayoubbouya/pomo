@@ -9,9 +9,7 @@ function TodoList() {
     if (!todo.text || /^\s*$/.test(todo.text)) {
       return;
     }
-
     const newTodos = [todo, ...todos];
-
     setTodos(newTodos);
     console.log(...todos);
   };
@@ -44,7 +42,6 @@ function TodoList() {
 
   return (
     <>
-      <h1>What's the Plan for Today?</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import todoform from "./todoform.module.css";
 
 function TodoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : "");
@@ -24,7 +25,7 @@ function TodoForm(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="todo-form">
+    <form onSubmit={handleSubmit} className={todoform.sectionTodoList}>
       {props.edit ? (
         <>
           <input
@@ -33,24 +34,26 @@ function TodoForm(props) {
             onChange={handleChange}
             name="text"
             ref={inputRef}
-            className="todo-input edit"
+            className={todoform.inputTodo}
           />
-          <button onClick={handleSubmit} className="todo-button edit">
+          <button onClick={handleSubmit} className={todoform.btnSave}>
             Update
           </button>
         </>
       ) : (
         <>
           <input
-            placeholder="Add a todo"
+            placeholder="What are you working on ?"
             value={input}
             onChange={handleChange}
             name="text"
-            className="todo-input"
+            className={todoform.inputTodo}
             ref={inputRef}
           />
-          <button onClick={handleSubmit} className="todo-button">
-            Add todo
+          <br />
+          <h6 className={todoform.h6}>Est Pomodoros</h6>
+          <button onClick={handleSubmit} className={todoform.btnSave}>
+            Save
           </button>
         </>
       )}
